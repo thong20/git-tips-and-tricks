@@ -1,0 +1,16 @@
+Khắc phục lỗi:
+
+thong20@Chriss-MacBook-Pro RN_CLI_Projects % git push -u origin master
+To https://github.com/thong20/react-native.git
+ ! [rejected]          master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/thong20/react-native.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Lỗi này xảy ra khi ta tạo mới 1 project tại local
+Sau đó ta push project nay lên nhánh master của remote
+Có lẽ là lỗi không cho ghi đè từ 1 repo khác ở local
+Để khắc phục ta chỉ việc push lại với flag là -f:
+git push -f origin master => Enter

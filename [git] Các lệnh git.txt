@@ -1,0 +1,138 @@
+Các lệnh git
+https://viblo.asia/p/mot-so-dinh-nghia-thuong-gap-khi-su-dung-git-Ljy5Veozlra
+https://bitly.com.vn/5clp1d
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+==========================================================
+- working directory / untracked files(red color)
+- staging area (green color)
+- git repository
+
+git checkout -- <file>
+
+=== Branch =================================================
+## LOCAL
+  *** Tạo Branch
+git branch <branch-name> => Enter
+
+  *** Xem các Branch
+git branch => Enter
+
+  *** Chuyển Branch:
+git checkout <branch-name> => Enter
+
+  *** Tạo Branch:
+git branch <branch-name> => Enter
+  *** Tạo và chuyển Branch:
+git checkout -b <branch-name> => Enter (tạo 1 Branch mới và chuyển sang đó)
+
+  *** Chyển Branch:
+git checkout <branch-name> => Enter
+
+  *** Xóa Branch:
+git branch -D <branch-name> => Enter
+
+  *** Merge Branch
+git merge <branch-name>	=> Enter	(trước khi “merge”, ta phải checkout về master trước)
+
+  *** Đổi tên Branch tại Local
+vd: ta cần đổi tên branch "lesson-reactstrap" thành "lesson-react-bootstrap"
+Bước 1: switch tới branch cần đổi tên bằng lệnh:
+git checkout lesson-reactstrap => Enter
+Bước 2: đổi tên bằng lệnh:
+git branch -m lesson-react-bootstrap => Enter
+
+=== Remote ======================================================
+  *** Kết nối vào Remote
+git remote add origin <https://.....> => Enter, đặt tên cho Remote này là: origin
+
+  *** Xem đang remote nào:
+git remote -v => Enter
+
+  *** Xem tên remote
+git remote => Enter, xem tên remote, giả sử là: origin
+
+  *** Xem toàn bộ thông tin của remote
+git remote show origin => Enter
+
+ *** Kiểm tra các nhánh có trên Remote và Local:
+git branch -a => Enter
+
+  *** Xoá 1 branch trên Remote:
+git push origin --delete <branch-name-remote> => Enter
+
+
+=== Push ======================================================
+git push -u origin master => Enter
+
+Push lên 1 branch khác ở github:
+- Tại local, tạo 1 branch mới:
+git checkout -b <new-branch-local> => Enter
+- Push lên branch GitHub:
+git push -u origin <new_branch_name_on_github> => Enter
+<new_branch_name_on_github>: nên trùng tên với branch ở local
+
+=== Clone ======================================================
+clone 1 branch bất kỳ
+git clone --branch <branch-name> <remote-repo-url> => Enter
+hoặc:
+git clone -b <branch-name> <remote-repo-url> => Enter
+https://github.com/thong20/RN_CLI_TestCode
+
+=== pull ======================================================
+git pull = git fetch + git merge
+
+  *** pull 1 branch của remote:
+git pull <remote> <branch-name-remote> => Enter
+
+  *** pull đè tại local
+keyword: pull đè tại local
+link: https://www.it-swarm-vi.tech/vi/git/lam-cach-nao-de-buoc-git-pull-ghi-de-len-cac-tep-cuc-bo/967288540/
+Hướng dẫn này sẽ ghi đè các file từ nhánh master ở remote đè lên
+các file ở nhánh master tại local
+Bước 1: checkout về master tại local:
+	git checkout master => Enter
+Bước 2: sử dụng git fetch chứ không phải git pull
+	git fetch origin master => Enter (recommended)
+  hoặc:
+	git fetch --all => Enter
+Bước 3: reset head
+	git reset --hard origin/master
+
+=== RESET ======================================================
+- xóa bỏ “Untracked files”:
+git checkout -- <file-name> => Enter
+- xóa bỏ file trong Staging:
+git reset HEAD <file-name> => Enter
+(hoặc "git restore --staged <file-name>” to unstage)
+
+- gỡ bỏ commit:
+git reset --soft <hash-commit> => Enter (đưa commit về staging area - màu xanh lá)
+git reset --mixed <hash-commit> => Enter (đưa commit về working-directory - màu đỏ)
+git reset --hard <hash-commit> => Enter (đưa commit về trạng thái trước khi vào working-directory)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
