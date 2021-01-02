@@ -1,0 +1,10 @@
+ecoh “This is a text” >> README.md => Enter
+git init => Enter
+git add README.md => Enter
+git commit -m “first commit” => Enter
+git branch -M main => Enter
+git remote add origin https://github.com/thong20/RN_MyProjectsExpo.git => Enter
+git push -u origin main => Enter
+
+
+
