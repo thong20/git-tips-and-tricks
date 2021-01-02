@@ -1,0 +1,146 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2576
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww27120\viewh12880\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\sl400\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 C\'e1c l\uc0\u7879 nh git\
+https://viblo.asia/p/mot-so-dinh-nghia-thuong-gap-khi-su-dung-git-Ljy5Veozlra\
+https://bitly.com.vn/5clp1d\
+\
+Changes to be committed:\
+  (use "git restore --staged <file>..." to unstage)\
+\
+Changes not staged for commit:\
+  (use "git add/rm <file>..." to update what will be committed)\
+  (use "git restore <file>..." to discard changes in working directory)\
+\
+Untracked files:\
+  (use "git add <file>..." to include in what will be committed)\
+\
+==========================================================\
+- working directory / untracked files(red color)\
+- staging area (green color)\
+- git repository\
+\
+git checkout -- <file>\
+\
+=== Branch =================================================\
+## LOCAL\
+  *** T\uc0\u7841 o Branch\
+git branch <branch-name> => Enter\
+\
+  *** Xem c\'e1c Branch\
+git branch => Enter\
+\
+  *** Chuy\uc0\u7875 n Branch:\
+git checkout <branch-name> => Enter\
+\
+  *** T\uc0\u7841 o Branch:\
+git branch <branch-name> => Enter\
+  *** T\uc0\u7841 o v\'e0 chuy\u7875 n Branch:\
+git checkout -b <branch-name> => Enter (t\uc0\u7841 o 1 Branch m\u7899 i v\'e0 chuy\u7875 n sang \u273 \'f3)\
+\
+  *** Chy\uc0\u7875 n Branch:\
+git checkout <branch-name> => Enter\
+\
+  *** X\'f3a Branch:\
+git branch -D <branch-name> => Enter\
+\
+  *** Merge Branch\
+git merge <branch-name>	=> Enter	(tr\uc0\u432 \u7899 c khi \'93merge\'94, ta ph\u7843 i checkout v\u7873  master tr\u432 \u7899 c)\
+\
+  *** \uc0\u272 \u7893 i t\'ean Branch t\u7841 i Local\
+vd: ta c\uc0\u7847 n \u273 \u7893 i t\'ean branch "lesson-reactstrap" th\'e0nh "lesson-react-bootstrap"\
+B\uc0\u432 \u7899 c 1: switch t\u7899 i branch c\u7847 n \u273 \u7893 i t\'ean b\u7857 ng l\u7879 nh:\
+git checkout lesson-reactstrap => Enter\
+B\uc0\u432 \u7899 c 2: \u273 \u7893 i t\'ean b\u7857 ng l\u7879 nh:\
+git branch -m lesson-react-bootstrap => Enter\
+\
+=== Remote ======================================================\
+  *** K\uc0\u7871 t n\u7889 i v\'e0o Remote\
+git remote add origin <https://.....> => Enter, \uc0\u273 \u7863 t t\'ean cho Remote n\'e0y l\'e0: origin\
+\
+  *** Xem \uc0\u273 ang remote n\'e0o:\
+git remote -v => Enter\
+\
+  *** Xem t\'ean remote\
+git remote => Enter, xem t\'ean remote, gi\uc0\u7843  s\u7917  l\'e0: origin\
+\
+  *** Xem to\'e0n b\uc0\u7897  th\'f4ng tin c\u7911 a remote\
+git remote show origin => Enter\
+\
+ *** Ki\uc0\u7875 m tra c\'e1c nh\'e1nh c\'f3 tr\'ean Remote v\'e0 Local:\
+git branch -a => Enter\
+\
+  *** Xo\'e1 1 branch tr\'ean Remote:\
+git push origin --delete <branch-name-remote> => Enter\
+\
+\
+=== Push ======================================================\
+git push -u origin master => Enter\
+\
+Push l\'ean 1 branch kh\'e1c \uc0\u7903  github:\
+- T\uc0\u7841 i local, t\u7841 o 1 branch m\u7899 i:\
+git checkout -b <new-branch-local> => Enter\
+- Push l\'ean branch GitHub:\
+git push -u origin <new_branch_name_on_github> => Enter\
+<new_branch_name_on_github>: n\'ean tr\'f9ng t\'ean v\uc0\u7899 i branch \u7903  local\
+\
+=== Clone ======================================================\
+clone 1 branch b\uc0\u7845 t k\u7923 \
+git clone --branch <branch-name> <remote-repo-url> => Enter\
+ho\uc0\u7863 c:\
+git clone -b <branch-name> <remote-repo-url> => Enter\
+https://github.com/thong20/RN_CLI_TestCode\
+\
+=== pull ======================================================\
+git pull = git fetch + git merge\
+\
+  *** pull 1 branch c\uc0\u7911 a remote:\
+git pull <remote> <branch-name-remote> => Enter\
+\
+  *** pull \uc0\u273 \'e8 t\u7841 i local\
+keyword: pull \uc0\u273 \'e8 t\u7841 i local\
+link: https://www.it-swarm-vi.tech/vi/git/lam-cach-nao-de-buoc-git-pull-ghi-de-len-cac-tep-cuc-bo/967288540/\
+H\uc0\u432 \u7899 ng d\u7851 n n\'e0y s\u7869  ghi \u273 \'e8 c\'e1c file t\u7915  nh\'e1nh master \u7903  remote \u273 \'e8 l\'ean\
+c\'e1c file \uc0\u7903  nh\'e1nh master t\u7841 i local\
+B\uc0\u432 \u7899 c 1: checkout v\u7873  master t\u7841 i local:\
+	git checkout master => Enter\
+B\uc0\u432 \u7899 c 2: s\u7917  d\u7909 ng git fetch ch\u7913  kh\'f4ng ph\u7843 i git pull\
+	git fetch origin master => Enter (recommended)\
+  ho\uc0\u7863 c:\
+	git fetch --all => Enter\
+B\uc0\u432 \u7899 c 3: reset head\
+	git reset --hard origin/master\
+\
+=== RESET ======================================================\
+- x\'f3a b\uc0\u7887  \'93Untracked files\'94:\
+git checkout -- <file-name> => Enter\
+- x\'f3a b\uc0\u7887  file trong Staging:\
+git reset HEAD <file-name> => Enter\
+(ho\uc0\u7863 c "git restore --staged <file-name>\'94 to unstage)\
+\
+- g\uc0\u7905  b\u7887  commit:\
+git reset --soft <hash-commit> => Enter (\uc0\u273 \u432 a commit v\u7873  staging area - m\'e0u xanh l\'e1)\
+git reset --mixed <hash-commit> => Enter (\uc0\u273 \u432 a commit v\u7873  working-directory - m\'e0u \u273 \u7887 )\
+git reset --hard <hash-commit> => Enter (\uc0\u273 \u432 a commit v\u7873  tr\u7841 ng th\'e1i tr\u432 \u7899 c khi v\'e0o working-directory)\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
