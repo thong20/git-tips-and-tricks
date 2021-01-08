@@ -70,6 +70,9 @@ git branch -a => Enter
   *** Xoá 1 branch trên Remote:
 git push origin --delete <branch-name-remote> => Enter
 
+  *** Rename 1 nhánh cả ở local và trên remote
+git branch -m new-name => Enter
+git push remote-name :old-name new-name => Enter
 
 === Push ======================================================
 git push -u origin master => Enter
