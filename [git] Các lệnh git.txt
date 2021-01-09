@@ -41,8 +41,7 @@ git checkout <branch-name> => Enter
   *** Xóa Branch:
 git branch -D <branch-name> => Enter
 
-  *** Merge Branch
-git merge <branch-name>	=> Enter	(trước khi “merge”, ta phải checkout về master trước)
+  
 
   *** Đổi tên Branch tại Local
 vd: ta cần đổi tên branch "lesson-reactstrap" thành "lesson-react-bootstrap"
@@ -50,6 +49,20 @@ Bước 1: switch tới branch cần đổi tên bằng lệnh:
 git checkout lesson-reactstrap => Enter
 Bước 2: đổi tên bằng lệnh:
 git branch -m lesson-react-bootstrap => Enter
+
+=== Merge =========================================================
+*** Merge Branch
+git checkout <branch-name-target> => Enter
+git merge <branch-name>	=> Enter (trước khi “merge”, ta phải checkout về master trước)
+
+Vd: ta có 3 branch "master", "task01", "task02"
+- Ta cần merger branch "task02" vào "task01":
+git checkout task01 => Enter (switched vào branch "task01" là branch đích)
+git merge task02 => Enter (Gộp "task02" vào "task01")
+
+- Tiếp tục, ta cần gộp branch "task01" vào "master":
+git checkout master => Enter (switched vào branch "master")
+git merge task01 => Enter (Gộp "task01" vào "master")
 
 === Remote ======================================================
   *** Kết nối vào Remote
