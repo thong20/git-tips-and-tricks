@@ -134,7 +134,16 @@ git reset --soft <hash-commit> => Enter (đưa commit về staging area - màu x
 git reset --mixed <hash-commit> => Enter (đưa commit về working-directory - màu đỏ)
 git reset --hard <hash-commit> => Enter (đưa commit về trạng thái trước khi vào working-directory)
 
+=== GIT LOG ========================================================
+  *** Xem 2 commit cuối:
+git log -2 => Enter
 
+  *** Xem chi tiết các thay đổi của từng commit thì ta thêm -p:
+vd: Xem chi tiết thay đổi của 2 commit cuối cùng
+git log -p -2 => Enter
+
+  ** Xem tóm tắt các thay đổi của từng commit là --stat:
+git log --stat -2 => Enter
 
 
 
