@@ -41,8 +41,6 @@ git checkout <branch-name> => Enter
   *** Xóa Branch:
 git branch -D <branch-name> => Enter
 
-  
-
   *** Đổi tên Branch tại Local
 vd: ta cần đổi tên branch "lesson-reactstrap" thành "lesson-react-bootstrap"
 Bước 1: switch tới branch cần đổi tên bằng lệnh:
