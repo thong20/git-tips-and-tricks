@@ -1,5 +1,6 @@
-Khắc phục lỗi:
+Khắc phục lỗi
 
+*** none-fast-forward khi push ==================================================================================
 thong20@Chriss-MacBook-Pro RN_CLI_Projects % git push -u origin master
 To https://github.com/thong20/react-native.git
  ! [rejected]          master -> master (non-fast-forward)
@@ -14,3 +15,24 @@ Sau đó ta push project nay lên nhánh master của remote
 Có lẽ là lỗi không cho ghi đè từ 1 repo khác ở local
 Để khắc phục ta chỉ việc push lại với flag là -f:
 git push -f origin master => Enter
+
+
+*** fatal: refusing to merge unrelated histories khi pull =======================================================
+Do histories của local và remote không liên quan với nhau
+
+Link: https://www.educative.io/edpresso/the-fatal-refusing-to-merge-unrelated-histories-git-error
+
+để khắc phục ta thêm tham số: --allow-unrelated-histories khi sử dụng lệnh pull:
+vd: ta cần pull 1 branch trên remote là "RN_CLI_TestCode" về branch tại local là "firebase--react-native-tutorials"
+git checkout firebase--react-native-tutorials => Enter
+git pull origin RN_CLI_TestCode => Enter => Báo Lỗi
+
+git pull origin RN_CLI_TestCode --allow-unrelated-histories => Enter
+
+
+
+
+
+
+
+

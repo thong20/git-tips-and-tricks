@@ -123,8 +123,55 @@ Bước 3: reset head
 	git reset --hard origin/master
 
   *** fetch 1 branch on remote
-git fetch <remote-repo> <remote-branch>:<local-branch> => Enter
+link: https://stackabuse.com/git-fetch-a-remote-branch/
+
+- Bước 1:
+git fetch <remote-repo> <remote-branch>:<local-branch> => Enter 
+với:
+  <remote-repo>   : tên của remote (ví dụ: origin)
+  <remote-branch> : tên nhánh của remote cần fetch
+  <local-branch>  : tên cho nhánh mới tại local khi
+                    fetch về (khuyến nghị: nên trùng tên với branch của remote cần fetch)
+- Bước 2: cuối cùng checkout vào <local-branch> đó là xong
 git checkout <local-branch> => Enter
+
+vd: Cần fetch 1 nhánh của remote tên là "task02" về 1 branch tại local
+- Tại local ta có các branch: "master", "task01"
+và tên remote là "origin"
+
+Bước 1: checkout master (recommanded)
+git checkout master => Enter
+
+Bước 2: fetch về 1 nhánh mới tại local
+git fetch origin task02:task02 => Enter
+
+Sau câu lệnh này, tại local ta có các branch: master, task01 và task02
+và task02 sẽ có source là branch "task02" của remote
+
+Bước 3: checkout
+git checkout task02 => Enter
+
+Sau câu lệnh này, tất cả các mã code trên remote-branch
+sẽ được tải về nhánh "task02" tại local
+
+- Vậy trường hợp ta cần fetch về 1 branch có sẵn tại local tên là "lesson-rn"
+Thực hiện như sau:
+Bước 1: Xóa data
+git checkout lesson-rn => Enter
+=> Tiến hành xóa toàn bộ code của Project (bao gồm file và folder) trừ mỗi folder của git là .git
+Bước 2: checkout về master (recommanded)
+git checkout master => Enter
+
+Bước 3: fetch vào branch "lesson-rn"
+git fetch origin task02:lesson-rn => Enter
+
+Bước 4: checkout vào "lesson-rn"
+git checkout lesson-rn => Enter
+
+Bước 5: reset HEAD
+git reset --hard origin/task02 => Enter là xong
+
+
 
 === RESET ======================================================
 - xóa bỏ “Untracked files”:
