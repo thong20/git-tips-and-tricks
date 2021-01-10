@@ -122,6 +122,10 @@ Bước 2: sử dụng git fetch chứ không phải git pull
 Bước 3: reset head
 	git reset --hard origin/master
 
+  *** fetch 1 branch on remote
+git fetch <remote-repo> <remote-branch>:<local-branch> => Enter
+git checkout <local-branch> => Enter
+
 === RESET ======================================================
 - xóa bỏ “Untracked files”:
 git checkout -- <file-name> => Enter
